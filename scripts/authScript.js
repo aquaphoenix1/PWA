@@ -25,7 +25,7 @@
 
                  let success = function (login) {
                      $.cookie('login', login);
-                     window.location.href = "PWA/notesList";
+                     window.location.href = "notesList";
                 }
 
                 let error = function(){
