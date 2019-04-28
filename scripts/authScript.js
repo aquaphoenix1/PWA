@@ -35,7 +35,7 @@
                     $('<button class="closeAlertWindowButton">Закрыть</button>').appendTo($alertWindow).on('click', function(){
                         $('#authForm').prop('disabled', false);
                         $alertWindow.remove();
-                    };
+                    });
                 }
 
                 sendLoginData(login, password, success, error);
