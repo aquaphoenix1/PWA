@@ -225,13 +225,23 @@ function createNote(noteData){
 	let $noteValue = $('<span class="noteValue"></span>').appendTo($div)
 		.mousedown((ev)=>{
 			if(!$("#notesList :input").prop("disabled")){
+				let element = $(ev.target).parent().find('.buttonControlsWrapper');
+				if(element.css('display') == 'flex'){
+					element.hide();
+				}
+				else{
+					element.css('display', 'flex');
+				}
+			}
+			/*if(!$("#notesList :input").prop("disabled")){
 				timer = setTimeout(() => {
 					clearTimeout(timer);
 					timer = null;
 					$(ev.target).parent().find('.buttonControlsWrapper').css('display', 'flex');
 						}, 500);
 			}
-		})
+			*/
+		})/*
 		.mouseup((ev)=>{
 			if(!$("#notesList :input").prop("disabled")){
 				clearTimeout(timer);
@@ -239,7 +249,7 @@ function createNote(noteData){
 					$(ev.target).parent().find('.buttonControlsWrapper').hide();
 				}
 			}
-		}).text(noteData.note);
+		})*/.text(noteData.note);
     let $controlButtonsWrapper = $('<div class="buttonControlsWrapper"></div>').appendTo($div);
 	$('<button class="buttonControl">Редактировать</button>').appendTo($controlButtonsWrapper).click((ev)=>{
 		$(ev.target).parent().parent().find('.buttonControlsWrapper').hide();
