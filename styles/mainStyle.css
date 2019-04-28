@@ -1,3 +1,5 @@
+body{
+	background: url('./image/android-icon-192x192.png' norepeat);}
 #authFormWrapper {
 	background-color:aquamarine;
 	margin: auto;
