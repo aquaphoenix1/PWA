@@ -54,7 +54,6 @@ function sendLoginData(login, password, success, error){
         error: (err, errText, errThrown) => {
             console.error('ajax error:' + errThrown);
             error();
-            success("awda");
         }
     });
 }
