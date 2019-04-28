@@ -23,7 +23,8 @@
 
                 let password = $('#password').val();
 
-                 let success = function (login, response) {
+                 let success = function (login) {
+                     $.cookie('login', login);
                      window.location.href = "PWA/notesList";
                 }
 
@@ -48,7 +49,7 @@ function sendLoginData(login, password, success, error){
         },
         success:(response) => {
             console.log('ajax success');
-            success(login, response);
+            success(login);
         },
         error: (err, errText, errThrown) => {
             console.error('ajax error:' + errThrown);
