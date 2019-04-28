@@ -1,7 +1,6 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
-  'main.html',
-  '123.html',
+  'index.html',
   'image/apple-icon-57x57.png',
   'image/apple-icon-60x60.png',
   'image/apple-icon-72x72.png',
