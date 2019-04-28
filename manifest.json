@@ -2,7 +2,7 @@
   "name": "CrossNotebook",
   "short_name": "Notebook",
   "lang": "ru",
-  "start_url": "/",
+  "start_url": "/PWA/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#6666FF",
