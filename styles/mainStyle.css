@@ -1,5 +1,5 @@
 body{
-	background: url('./image/android-icon-192x192.png' norepeat);}
+	background-image: url('./image/android-icon-192x192.png');}
 #authFormWrapper {
 	background-color:aquamarine;
 	margin: auto;
