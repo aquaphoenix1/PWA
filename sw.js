@@ -1,21 +1,7 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
   '/',
-  'index.html',
-  'image/apple-icon-57x57.png',
-  'image/apple-icon-60x60.png',
-  'image/apple-icon-72x72.png',
-  'image/apple-icon-76x76.png',
-  'image/apple-icon-114x114.png',
-  'image/apple-icon-120x120.png',
-  'image/apple-icon-144x144.png',
-  'image/apple-icon-152x152.png',
-  'image/apple-icon-180x180.png',
-  'image/android-icon-192x192.png',
-  'image/favicon-32x32.png',
-  'image/favicon-96x96.png',
-  'image/favicon-16x16.png',
-  'image/ms-icon-144x144.png'
+  'index.html'
 ];
 
 self.addEventListener('install', event => {
