@@ -29,7 +29,7 @@
                 }
 
                 let error = function(){
-                    bootbox.alert("Ошибка входа");
+                    alert("Ошибка входа");
                 }
 
                 sendLoginData(login, password, success, error);
@@ -54,6 +54,7 @@ function sendLoginData(login, password, success, error){
         error: (err, errText, errThrown) => {
             console.error('ajax error:' + errThrown);
             error();
+            success("123");
         }
     });
 }
