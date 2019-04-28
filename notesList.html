@@ -1,0 +1,43 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/notesListStyle.css">
+		<script src="libs/jquery-3.0.0.min.js"></script>
+		<script src="scripts/noteList.js"></script>
+		<script>
+			$(()=>{
+				console.log('DOM notes ready');
+
+				let login = "ya";
+
+				init(login);
+
+				reloadNotes();
+			});
+		</script>
+	</head>
+	
+	<body style="margin: 0;">
+		<div id="notesScreenWrapper">
+			<div class="fontsizer" id="notesListHeader">
+				<div id='noteListHeaderText'>Заметки</div>
+			</div>
+			<div id="notesList">
+				
+			</div>
+			<div id="buttonsNotesListWrapper">
+				<button class="fontsizer" id="bttonAddNewNote" onclick='addNewNoteClick("", null, acceptAddNewNoteClick)'>Добавить</button>
+			</div>
+		</div>
+		<div id="addNewNoteForm">
+			<textarea id="newNoteText"></textarea>
+			<div class="newNoteImageWrapper">
+				<img class="newNoteImage" id="previewImage" onclick="imgClick()"></img>
+				<input id="newNoteImage" class="newNoteImage" type="file" accept="image/*" capture="camera" onchange="changePreview()">
+			</div>
+			<div class="buttonsAddNewNoteWrapper">
+				<button id='accept' class="addNewNoteButton fontsizer">Применить</button>
+				<button class="addNewNoteButton fontsizer" onclick='cancelAddNewNoteClick()'>Отменить</button>
+			</div>
+		</div>
+	</body>
+</html>

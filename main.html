@@ -1,0 +1,65 @@
+<html lang="en">
+	<head>
+	<link rel="manifest" href="manifest.json">
+
+	<link rel="stylesheet" type="text/css" href="styles/mainStyle.css">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/image/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/image/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/image/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/image/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/image/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/image/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/image/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/image/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/image/apple-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="/image/apple-icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/image/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/image/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+	
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Notebook">
+	<meta name="apple-mobile-web-app-title" content="Notebook">
+	<meta name="theme-color" content="#6666FF">
+	<meta name="msapplication-navbutton-color" content="#6666FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/main.html">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="manifest" href="/manifest.json">
+	<script> 
+		if ('serviceWorker' in navigator) {
+    // Весь код регистрации у нас асинхронный.
+    navigator.serviceWorker.register('sw.js')
+      .then(() => navigator.serviceWorker.ready.then((worker) => {
+        worker.sync.register('syncdata');
+      }))
+      .catch((err) => console.log(err));
+}
+	</script>
+
+	<script src="libs/jquery-3.0.0.min.js"></script>
+	<script src="libs/jquery.validate.min.js"></script>
+	<script async src="scripts/authScript.js"></script>
+	
+	</head>
+	
+	<body style="margin: 0;">
+		<div id="authForm">
+			<form id="authFormWrapper" onsubmit="return false;">
+				<label class="authFormLabel">Логин</label>
+				<input class="authFormInput" name="login" id="login"></input>
+				<label class="authFormLabel">Пароль</label>
+				<input class="authFormInput" name="pswd" type="password" id="password"></input>
+				<div id="authFormButtonsWrapper">
+        			<button class="authFormButtons" id="enterButton" onclick="sendLogin()">Вход</button>
+    			</div>
+			</form>
+		</div>
+	</body>
+</html>
