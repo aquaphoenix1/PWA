@@ -29,7 +29,7 @@
                 }
 
                 let error = function(){
-                    bootbox("Ошибка входа");
+                    bootbox.alert("Ошибка входа");
                 }
 
                 sendLoginData(login, password, success, error);
