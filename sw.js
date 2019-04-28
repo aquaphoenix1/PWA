@@ -1,6 +1,7 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
-  'index.html'
+  'index.html',
+  'notesList.html'
 ];
 
 self.addEventListener('install', event => {
