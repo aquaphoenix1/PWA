@@ -43,7 +43,7 @@ self.addEventListener('fetch', event => {
     );
 });
 
-self.addEventListener('fetch', event => {
+/*self.addEventListener('fetch', event => {
   console.log('Fetch intercepted for:', event.request.url);
   event.respondWith(caches.match(event.request)
     .then(cachedResponse => {
@@ -53,4 +53,4 @@ self.addEventListener('fetch', event => {
         return fetch(event.request);
       })
     );
-});
+});*/
