@@ -2,8 +2,6 @@ const cacheName = 'cache-v1';
 const precacheResources = [
   'index.html',
   'notesList.html',
-  'libs/bootbox.min.js',
-  'libs/bootstrap.min.js',
   'libs/jquery-3.0.0.min.js',
   'libs/jquery.cookie.js',
   'libs/jquery.validate.min.js',
