@@ -29,7 +29,13 @@
                 }
 
                 let error = function(){
-                    alert("Ошибка входа");
+                    $('#authForm').prop('disabled', true);
+                    let $alertWindow = $('<div class="alertWindow"></div>').appendTo($(body));
+                    $('<div class="alertWindowText">Ошибка входа</div>').appendTo($alertWindow);
+                    $('<button class="closeAlertWindowButton">Закрыть</button>').appendTo($alertWindow).on('click', function(){
+                        $('#authForm').prop('disabled', false);
+                        $alertWindow.remove();
+                    };
                 }
 
                 sendLoginData(login, password, success, error);
