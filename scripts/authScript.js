@@ -24,7 +24,7 @@
                 let password = $('#password').val();
 
                  let success = function (login, response) {
-                     window.location.href = "/notesList";
+                     window.location.href = "PWA/notesList";
                 }
 
                 let error = function(){
