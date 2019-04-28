@@ -30,7 +30,7 @@
 
                 let error = function(){
                     $('#authForm').prop('disabled', true);
-                    let $alertWindow = $('<div class="alertWindow"></div>').appendTo($(body));
+                    let $alertWindow = $('<div class="alertWindow"></div>').appendTo($('body'));
                     $('<div class="alertWindowText">Ошибка входа</div>').appendTo($alertWindow);
                     $('<button class="closeAlertWindowButton">Закрыть</button>').appendTo($alertWindow).on('click', function(){
                         $('#authForm').prop('disabled', false);
