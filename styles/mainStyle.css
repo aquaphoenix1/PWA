@@ -47,15 +47,14 @@
 
 .alertWindow{
 	position: absolute;
-	left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
     width: 30%;
     height: 10%;
     display: flex;
     flex-flow: column;
     background-color: #8e8e8e;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .alertWindowText{
