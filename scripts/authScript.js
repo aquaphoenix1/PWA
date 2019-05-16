@@ -44,7 +44,7 @@
 }
 
 var options = {
-                    type: "GET",
+                    method: "GET",
                     url: "http://localhost:62094/api/Login",
                      data: {
                         login: login,
