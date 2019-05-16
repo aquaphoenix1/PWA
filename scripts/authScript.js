@@ -60,7 +60,7 @@ var options = {
 }
     
 function sendLoginData(login, password, success, error){
-    $.ajax(/*{
+    /*$.ajax({
         method: "GET",
         url: "http://localhost:62094/api/Login",
         async: false,
@@ -76,7 +76,7 @@ function sendLoginData(login, password, success, error){
             console.error('ajax error:' + errThrown);
             error();
         }
-    }*/
+ 
         {  
             type: "GET",  
             url: 'http://localhost:62094/api/Login',  
@@ -104,5 +104,14 @@ function sendLoginData(login, password, success, error){
             }
         }
     
-    );
+    );*/
+    var x = new XMLHttpRequest(); 
+        x.open("GET", "http://localhost:62094/api/Login", true); 
+        x.onload = function (){ 
+            alert( x.responseText); 
+        } 
+        x.send( data: {
+                login: login,
+                password: password
+            });
 }
