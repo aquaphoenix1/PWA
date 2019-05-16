@@ -43,9 +43,23 @@
           });
 }
 
+var options = {
+                    type: "GET",
+                    url: "http://localhost:62094/api/Login",
+                     data: {
+                        login: login,
+                        password: password
+                    },
+                    async: false,
+                    cache: false,
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (response) {
+                        var a = 12;
+                    }
 
 function sendLoginData(login, password, success, error){
-    $.ajax({
+    $.ajax(/*{
         method: "GET",
         url: "http://localhost:62094/api/Login",
         async: false,
@@ -61,5 +75,7 @@ function sendLoginData(login, password, success, error){
             console.error('ajax error:' + errThrown);
             error();
         }
-    });
+    }*/
+    
+    options);
 }
