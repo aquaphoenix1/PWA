@@ -84,7 +84,7 @@ function sendLoginData(login, password, success, error){
                 login: login,
                 password: password
             },
-            contentType: "application/x-www-form-urlencoded;",  
+            contentType: "application/json; charset=utf-8",  
             dataType: "json",  
             beforeSend: function(){  
                 var a = 12;
