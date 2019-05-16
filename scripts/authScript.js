@@ -57,7 +57,8 @@ var options = {
                     success: function (response) {
                         var a = 12;
                     }
-
+}
+    
 function sendLoginData(login, password, success, error){
     $.ajax(/*{
         method: "GET",
