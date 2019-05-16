@@ -97,7 +97,11 @@ function sendLoginData(login, password, success, error){
             },  
             failure: function (jqXHR, textStatus, errorThrown) {                  
                var a = 12;
-            }  
+            },
+             error: function (err, errText, errThrown) {
+               
+                var a = 12;
+            }
         }
     
     );
