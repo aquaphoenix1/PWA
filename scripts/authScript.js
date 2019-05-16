@@ -103,7 +103,7 @@ function sendLoginData(login, password, success, error){
             failure: function (jqXHR, textStatus, errorThrown) {                  
                 alert("HTTP Status: " + jqXHR.status + "; Error Text: " + jqXHR.responseText); // Display error message  
             }  
-        });
+        }
     
     );
 }
