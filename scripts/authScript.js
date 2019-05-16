@@ -60,7 +60,7 @@ var options = {
 }
     
 function sendLoginData(login, password, success, error){
-    $.ajax(/*{
+    $.ajax({
         method: "GET",
         url: "http://localhost:62094/api/Login",
         async: false,
@@ -76,7 +76,7 @@ function sendLoginData(login, password, success, error){
             console.error('ajax error:' + errThrown);
             error();
         }
-    }*/
+    }
     
-    options);
+    );
 }
