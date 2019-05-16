@@ -87,21 +87,16 @@ function sendLoginData(login, password, success, error){
             contentType: "application/json; charset=utf-8",  
             dataType: "json",  
             beforeSend: function(){  
-                Show(); // Show loader icon  
+                var a = 12;
             },  
             success: function (response) {  
-              
-                // Looping over emloyee list and display it  
-                $.each(response, function (index, emp) {  
-                    $('#output').append('<p>Id: ' + emp.ID + '</p>' +  
-                                        '<p>Id: ' + emp.Name + '</p>');  
-                });  
+              var a = 12;
             },            
             complete: function(){  
-                Hide(); // Hide loader icon  
+                 var a = 12;
             },  
             failure: function (jqXHR, textStatus, errorThrown) {                  
-                alert("HTTP Status: " + jqXHR.status + "; Error Text: " + jqXHR.responseText); // Display error message  
+               var a = 12;
             }  
         }
     
