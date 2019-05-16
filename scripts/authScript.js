@@ -77,12 +77,12 @@ function sendLoginData(login, password, success, error){
             error();
         }
     }*/
-         $.ajax({  
+        {  
             type: "GET",  
             url: 'http://localhost:62094/api/Login',  
-             data: {
-            login: login,
-            password: password
+            data: {
+                login: login,
+                password: password
             },
             contentType: "application/json; charset=utf-8",  
             dataType: "json",  
