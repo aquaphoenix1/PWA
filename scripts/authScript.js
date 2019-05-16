@@ -47,7 +47,7 @@
 function sendLoginData(login, password, success, error){
     $.ajax({
         method: "GET",
-        url: "/login",
+        url: "http://localhost:62094/api/Login",
         async: false,
         data: {
             login: login,
