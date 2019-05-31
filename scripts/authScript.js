@@ -42,27 +42,12 @@
              }
           });
 }
-
-var options = {
-                    method: "GET",
-                    url: "http://localhost:62094/api/Login",
-                     data: {
-                        login: login,
-                        password: password
-                    },
-                    async: false,
-                    cache: false,
-                    dataType: "json",
-                    contentType: "application/json; charset=utf-8",
-                    success: function (response) {
-                        var a = 12;
-                    }
-}
     
 function sendLoginData(login, password, success, error){
-    /*$.ajax({
+    $.ajax({
         method: "GET",
         url: "http://localhost:62094/api/Login",
+        contentType: "application/json; charset=utf-8", 
         async: false,
         data: {
             login: login,
@@ -76,42 +61,4 @@ function sendLoginData(login, password, success, error){
             console.error('ajax error:' + errThrown);
             error();
         }
- 
-        {  
-            type: "GET",  
-            url: 'http://localhost:62094/api/Login',  
-            data: {
-                login: login,
-                password: password
-            },
-            contentType: "application/json; charset=utf-8",  
-            dataType: "json",  
-            beforeSend: function(){  
-                var a = 12;
-            },  
-            success: function (response) {  
-              var a = 12;
-            },            
-            complete: function(){  
-                 var a = 12;
-            },  
-            failure: function (jqXHR, textStatus, errorThrown) {                  
-               var a = 12;
-            },
-             error: function (err, errText, errThrown) {
-               
-                var a = 12;
-            }
-        }
-    
-    );*/
-    var x = new XMLHttpRequest(); 
-        x.open("GET", "http://localhost:62094/api/Login", true); 
-        x.onload = function (){ 
-            alert( x.responseText); 
-        } 
-        x.send( data: {
-                login: login,
-                password: password
-            });
 }
